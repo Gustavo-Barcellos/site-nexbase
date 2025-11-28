@@ -149,3 +149,17 @@ html {
 .animate-spotlight {
   animation: spotlight 10s ease-in-out infinite;
 }
+
+/* Fluxo de automação - linha pontilhada animada */
+@keyframes nex-flow-dash {
+  to {
+    stroke-dashoffset: -16;
+  }
+}
+
+.flow-line {
+  stroke-dasharray: 1 2; /* traço curto + espaço curto, estilo do print */
+  stroke-linecap: round;
+  animation: nex-flow-dash 1.1s linear infinite;
+}
+

@@ -6,8 +6,8 @@ import { AnimatedBg } from "@/components/animated-bg";
 import { PrimaryButton } from "@/components/primary-button";
 import { SplineScene } from "@/components/ui/splite";
 import { BorderTrail } from "@/components/ui/border-trail";
-import { Tilt } from "@/components/ui/tilt";
 import { motion } from "framer-motion";
+import ClinicAutomationFlow from "@/components/ui/clinic-automation-flow";
 
 const problems = [
   {
@@ -62,29 +62,6 @@ const solutions = [
   {
     title: "Pós-consulta com NPS",
     description: "Coleta feedback real dos pacientes e fortalece recorrência.",
-  },
-];
-
-const steps = [
-  {
-    title: "1. Paciente chama sua clínica",
-    description:
-      "WhatsApp, site ou Instagram: seu Agente responde na hora, sem fila e sem espera.",
-  },
-  {
-    title: "2. Agendamento guiado",
-    description:
-      "O Agente faz as perguntas certas, oferece horários e registra tudo no fluxo da clínica.",
-  },
-  {
-    title: "3. Confirmação + lembretes",
-    description:
-      "Antes da consulta, o paciente recebe sequência de lembretes otimizados para reduzir faltas.",
-  },
-  {
-    title: "4. Pós-consulta & NPS",
-    description:
-      "Depois do atendimento, o paciente recebe pesquisa simples para medir satisfação e abrir novas oportunidades.",
   },
 ];
 
@@ -320,29 +297,11 @@ export default function Home() {
             </p>
           </header>
 
-          <div className="grid gap-6 md:grid-cols-4">
-            {steps.map((step) => (
-              <Tilt
-                key={step.title}
-                rotationFactor={5}
-                className="will-change-transform"
-                springOptions={{
-                  stiffness: 40,
-                  damping: 8,
-                  mass: 0.4,
-                }}
-              >
-                <div className="relative flex h-full flex-col gap-2 rounded-2xl border border-white/10 bg-neutral-900/60 px-4 py-4">
-                  <div className="absolute left-4 top-3 h-1 w-8 rounded-full bg-nex-lime/80" />
-                  <h3 className="pt-4 text-sm font-semibold text-neutral-50">
-                    {step.title}
-                  </h3>
-                  <p className="text-xs text-neutral-300">
-                    {step.description}
-                  </p>
-                </div>
-              </Tilt>
-            ))}
+          {/* Novo fluxo visual de automações */}
+          <div className="w-full">
+            <div className="flex w-full justify-center">
+              <ClinicAutomationFlow className="mx-auto" />
+            </div>
           </div>
         </div>
       </section>
