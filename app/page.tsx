@@ -115,7 +115,7 @@ export default function Home() {
 
           <div className="grid gap-10 md:grid-cols-2 md:items-center">
             {/* ESQUERDA – badge, headline, subheadline, chips */}
-            <div className="relative z-10 flex flex-col gap-6">
+            <div className="relative z-10 flex flex-col gap-6 items-center md:items-start text-center md:text-left">
               <motion.span
                 whileHover={{ scale: 1.04, rotate: -0.5, y: -1 }}
                 transition={{
@@ -145,7 +145,7 @@ export default function Home() {
                 sua agenda — sem você contratar mais ninguém.
               </p>
 
-              <div className="mt-2 flex flex-wrap gap-3 text-xs text-neutral-300">
+              <div className="mt-2 flex flex-wrap justify-center md:justify-start gap-3 text-xs text-neutral-300">
                 <motion.span
                   whileHover={{ scale: 1.04, rotate: -0.5, y: -1 }}
                   transition={{
@@ -202,7 +202,7 @@ export default function Home() {
       {/* PROBLEMAS X SOLUÇÕES */}
       <section className="w-full border-b border-white/10 bg-nex-bg">
         <div id="sobre" className="mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 py-16 md:px-6 md:py-20">
-          <header className="space-y-2">
+          <header className="space-y-2 text-center md:text-left">
             <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">
               Problemas que você vive hoje vs. solução que você deveria ter
               ontem.
@@ -286,7 +286,7 @@ export default function Home() {
       {/* COMO FUNCIONA / FLUXO VISUAL SIMPLIFICADO */}
       <section className="w-full border-b border-white/10 bg-nex-bg">
         <div className="mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 py-16 md:px-6 md:py-20">
-          <header className="space-y-2">
+          <header className="space-y-2 text-center md:text-left">
             <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">
               Como funciona na prática dentro da sua clínica.
             </h2>
@@ -310,7 +310,7 @@ export default function Home() {
       <section id="lead-form" className="w-full bg-nex-bg">
         <div className="mx-auto flex w-full max-w-5xl flex-col gap-10 px-4 py-16 md:px-6 md:py-20">
           <div className="grid gap-10 md:grid-cols-[1.1fr,minmax(0,1fr)] md:items-start">
-            <div className="space-y-4">
+            <div className="space-y-4 text-center md:text-left">
               <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">
                 Vamos transformar o atendimento da sua clínica em uma máquina
                 previsível de agendamentos?
@@ -320,7 +320,7 @@ export default function Home() {
                 Agora, colocamos essa inteligência a serviço de clínicas que
                 querem crescer com processo, não com sorte.
               </p>
-              <ul className="space-y-2 text-sm text-neutral-300">
+              <ul className="space-y-2 text-sm text-neutral-300 text-left">
                 <li>• Processos validados em operações reais.</li>
                 <li>
                   • Redução real de no-show e aumento de aproveitamento da
