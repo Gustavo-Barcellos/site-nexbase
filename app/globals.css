@@ -163,3 +163,6 @@ html {
   animation: nex-flow-dash 1.1s linear infinite;
 }
 
+html, body {
+  overflow-x: hidden;
+}
