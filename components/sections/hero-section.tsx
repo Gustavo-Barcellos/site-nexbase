@@ -8,7 +8,6 @@ export default function HeroSection() {
   return (
     <section className="relative w-full border-b border-white/10 bg-nex-bg">
       <div className="relative mx-auto w-full max-w-5xl px-4 pt-10 pb-16 md:px-6 md:pt-14 md:pb-20">
-
         {/* NAV / LOGO + LINKS SUPERIORES */}
         <header className="relative z-20 mb-10 flex items-center justify-between">
           {/* Logo à esquerda */}
@@ -67,56 +66,16 @@ export default function HeroSection() {
 
             <h1 className="text-balance text-3xl font-semibold leading-tight tracking-tight md:text-4xl lg:text-5xl">
               Sua clínica perde dinheiro todo dia por causa de{" "}
-              <span className="text-nex-lime">atendimento lento e sem processo.</span>
+              <span className="text-nex-lime">
+                atendimento lento e sem processo.
+              </span>
             </h1>
 
             <p className="max-w-2xl text-sm text-neutral-300 md:text-base">
-              A gente instala um{" "}
-              <strong className="font-semibold">Agente de Atendimento com IA</strong>{" "}
-              que responde seus pacientes em segundos, reduz faltas e enche sua agenda — sem você contratar mais ninguém.
+              Todo minuto que sua equipe demora para responder um paciente é um
+              procedimento a menos fechado - e um concorrente ganhando no seu
+              lugar.
             </p>
-
-            <div className="mt-2 flex flex-wrap justify-center md:justify-start gap-3 text-xs text-neutral-300">
-              <motion.span
-                whileHover={{ scale: 1.04, rotate: -0.5, y: -1 }}
-                transition={{
-                  type: "spring",
-                  stiffness: 260,
-                  damping: 20,
-                  mass: 0.4,
-                }}
-                className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1"
-              >
-                <span className="h-2 w-2 rounded-full bg-nex-lime" />
-                Atendimento 24/7
-              </motion.span>
-
-              <motion.span
-                whileHover={{ scale: 1.04, rotate: -0.5, y: -1 }}
-                transition={{
-                  type: "spring",
-                  stiffness: 260,
-                  damping: 20,
-                  mass: 0.4,
-                }}
-                className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1"
-              >
-                Redução real de no-show
-              </motion.span>
-
-              <motion.span
-                whileHover={{ scale: 1.04, rotate: -0.5, y: -1 }}
-                transition={{
-                  type: "spring",
-                  stiffness: 260,
-                  damping: 20,
-                  mass: 0.4,
-                }}
-                className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1"
-              >
-                Sem trocar de software
-              </motion.span>
-            </div>
           </div>
 
           {/* DIREITA */}
