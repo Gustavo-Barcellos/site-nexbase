@@ -3,8 +3,7 @@
 import dynamic from "next/dynamic";
 
 const SplineScene = dynamic(
-  () =>
-    import("@/components/ui/splite").then((mod) => mod.SplineScene),
+  () => import("@/components/ui/splite").then((mod) => mod.SplineScene),
   {
     ssr: false,
     loading: () => (
@@ -18,7 +17,7 @@ const SplineScene = dynamic(
         />
       </div>
     ),
-  }
+  },
 );
 
 export default function HeroRobot() {

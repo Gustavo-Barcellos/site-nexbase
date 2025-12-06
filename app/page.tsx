@@ -51,8 +51,7 @@ const behaviorResults = [
       "Orçamentos esfriam, oportunidades morrem e a clínica deixa dinheiro na mesa diariamente.",
   },
   {
-    behavior:
-      "Ninguém acompanha orçamentos e oportunidades são perdidas",
+    behavior: "Ninguém acompanha orçamentos e oportunidades são perdidas",
     result:
       "Você investe em marketing para gerar leads… que não viram pacientes.",
   },
@@ -62,8 +61,7 @@ const behaviorResults = [
       "Você não fideliza o paciente e perde retorno, indicações e ticket recorrente.",
   },
   {
-    behavior:
-      "Você não mede satisfação nem fortalece vínculo com o paciente",
+    behavior: "Você não mede satisfação nem fortalece vínculo com o paciente",
     result:
       "A clínica vira apenas mais uma opção — e não a referência preferida do paciente.",
   },
@@ -121,8 +119,7 @@ export default function Home() {
     setIsSubmitting(true);
     setSubmitStatus("idle");
 
-    const pageUrl =
-      typeof window !== "undefined" ? window.location.href : null;
+    const pageUrl = typeof window !== "undefined" ? window.location.href : null;
 
     const payload = {
       name: formData.name,
@@ -167,37 +164,37 @@ export default function Home() {
       {/* HERO */}
       <HeroSection />
 
-            {/* COMPORTAMENTOS = RESULTADO */}
-            <section className="w-full border-b border-white/10 bg-nex-bg">
+      {/* COMPORTAMENTOS = RESULTADO */}
+      <section className="w-full border-b border-white/10 bg-nex-bg">
+        <div
+          id="sobre"
+          className="mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 py-16 md:px-6 md:py-20"
+        >
+          <header className="space-y-2 text-center">
+            <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">
+              Comportamentos = Resultado
+            </h2>
+          </header>
+
+          {/* AQUI: centralizado no mobile, alinhado à esquerda no desktop */}
+          <div className="space-y-4 text-sm text-neutral-200 text-center md:text-left">
+            {behaviorResults.map((item) => (
               <div
-                id="sobre"
-                className="mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 py-16 md:px-6 md:py-20"
+                key={item.behavior}
+                className="space-y-1 border-b border-white/10 pb-4 last:border-b-0 last:pb-0"
               >
-                <header className="space-y-2 text-center">
-                  <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">
-                    Comportamentos = Resultado
-                  </h2>
-                </header>
+                <p className="font-medium">{item.behavior}</p>
+                <p className="text-xs text-neutral-400 md:text-sm">
+                  {item.result}
+                </p>
+              </div>
+            ))}
+          </div>
 
-                {/* AQUI: centralizado no mobile, alinhado à esquerda no desktop */}
-                <div className="space-y-4 text-sm text-neutral-200 text-center md:text-left">
-                  {behaviorResults.map((item) => (
-                    <div
-                      key={item.behavior}
-                      className="space-y-1 border-b border-white/10 pb-4 last:border-b-0 last:pb-0"
-                    >
-                      <p className="font-medium">{item.behavior}</p>
-                      <p className="text-xs text-neutral-400 md:text-sm">
-                        {item.result}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="mt-8 flex justify-center">
-                  <a
-                    href="#lead-form"
-                    className="
+          <div className="mt-8 flex justify-center">
+            <a
+              href="#lead-form"
+              className="
                       inline-flex items-center justify-center
                       rounded-full bg-nex-lime px-7 py-3.5
                       text-sm font-semibold text-nex-bg
@@ -205,105 +202,110 @@ export default function Home() {
                       transition-all duration-200 ease-out
                       hover:scale-[1.04] hover:bg-nex-lime/90
                     "
-                  >
-                    Quero destravar o atendimento da minha clínica
-                  </a>
+            >
+              Quero destravar o atendimento da minha clínica
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* SOLUÇÕES */}
+      <section className="w-full border-b border-white/10 bg-nex-bg">
+        <div className="mx-auto w-full max-w-5xl px-4 py-16 md:px-6 md:py-20">
+          <h2 className="mb-10 text-center text-2xl font-semibold tracking-tight md:text-left md:text-3xl">
+            Soluções
+          </h2>
+
+          <div className="relative grid gap-10 md:grid-cols-2 md:gap-14">
+            {/* COLUNA DE TEXTO */}
+            <div className="space-y-6 text-sm text-neutral-300 md:text-base text-center md:text-left">
+              <div>
+                <p className="font-semibold text-neutral-100">
+                  Resposta em segundos, 24/7
+                </p>
+                <p>
+                  Seu Agente de Atendimento responde imediatamente — no
+                  WhatsApp, site e redes sociais — sem fila, sem espera e sem
+                  depender da equipe.
+                </p>
+              </div>
+
+              <div>
+                <p className="font-semibold text-neutral-100">
+                  Fluxos anti no-show
+                </p>
+                <p>
+                  Lembretes automáticos e inteligentes reduzem faltas em até
+                  80%, mantendo sua agenda cheia e previsível.
+                </p>
+              </div>
+
+              <div>
+                <p className="font-semibold text-neutral-100">
+                  Atendimento padronizado
+                </p>
+                <p>
+                  Todas as mensagens seguem um padrão profissional, humanizado e
+                  alinhado à sua clínica, garantindo consistência e autoridade.
+                </p>
+              </div>
+
+              <div>
+                <p className="font-semibold text-neutral-100">
+                  Confirmação automática de consultas
+                </p>
+                <p>
+                  Seu agente confirma horários, reage a cancelamentos e preenche
+                  vagas livres sem esforço da equipe.
+                </p>
+              </div>
+
+              <div>
+                <p className="font-semibold text-neutral-100">
+                  Follow-up estruturado
+                </p>
+                <p>
+                  Orçamentos são acompanhados com cadência estratégica,
+                  garantindo que nenhuma oportunidade esfrie ou se perca no
+                  caminho.
+                </p>
+              </div>
+
+              <div>
+                <p className="font-semibold text-neutral-100">
+                  Pós-consulta com NPS integrado
+                </p>
+                <p>
+                  Coleta feedback real dos pacientes, identifica pontos de
+                  melhoria e aumenta a fidelização e a recorrência
+                  automaticamente.
+                </p>
+              </div>
+            </div>
+
+            {/* IMAGEM — CRESCIDA, MAIS À DIREITA, MAIOR NO DESKTOP */}
+            <div className="relative flex justify-center md:justify-end">
+              <div className="w-full max-w-[520px] md:max-w-[640px] lg:max-w-[760px] translate-x-0 md:translate-x-6 lg:translate-x-10">
+                <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-neutral-400 text-center md:text-left">
+                  Exemplo de fluxo
+                </p>
+
+                <div className="overflow-hidden rounded-2xl border border-white/10 bg-neutral-900 shadow-xl shadow-black/40">
+                  <Image
+                    src="/template-n8n.png"
+                    alt="Fluxo de automações da Nexbase"
+                    width={2000}
+                    height={1200}
+                    quality={100}
+                    priority={false}
+                    className="w-full h-auto object-contain"
+                  />
                 </div>
               </div>
-            </section>
-
-            {/* SOLUÇÕES */}
-            <section className="w-full border-b border-white/10 bg-nex-bg">
-              <div className="mx-auto w-full max-w-5xl px-4 py-16 md:px-6 md:py-20">
-                
-                <h2 className="mb-10 text-center text-2xl font-semibold tracking-tight md:text-left md:text-3xl">
-                  Soluções
-                </h2>
-
-                      <div className="relative grid gap-10 md:grid-cols-2 md:gap-14">
-                        {/* COLUNA DE TEXTO */}
-                        <div className="space-y-6 text-sm text-neutral-300 md:text-base text-center md:text-left">
-                          <div>
-                            <p className="font-semibold text-neutral-100">
-                              Resposta em segundos, 24/7
-                            </p>
-                            <p>
-                              Seu Agente de Atendimento responde imediatamente — no WhatsApp, site e redes sociais — sem fila,
-                              sem espera e sem depender da equipe.
-                            </p>
-                          </div>
-
-                          <div>
-                            <p className="font-semibold text-neutral-100">Fluxos anti no-show</p>
-                            <p>
-                              Lembretes automáticos e inteligentes reduzem faltas em até 80%, mantendo sua agenda cheia e previsível.
-                            </p>
-                          </div>
-
-                          <div>
-                            <p className="font-semibold text-neutral-100">Atendimento padronizado</p>
-                            <p>
-                              Todas as mensagens seguem um padrão profissional, humanizado e alinhado à sua clínica, garantindo
-                              consistência e autoridade.
-                            </p>
-                          </div>
-
-                          <div>
-                            <p className="font-semibold text-neutral-100">
-                              Confirmação automática de consultas
-                            </p>
-                            <p>
-                              Seu agente confirma horários, reage a cancelamentos e preenche vagas livres sem esforço da equipe.
-                            </p>
-                          </div>
-
-                          <div>
-                            <p className="font-semibold text-neutral-100">Follow-up estruturado</p>
-                            <p>
-                              Orçamentos são acompanhados com cadência estratégica, garantindo que nenhuma oportunidade esfrie
-                              ou se perca no caminho.
-                            </p>
-                          </div>
-
-                          <div>
-                            <p className="font-semibold text-neutral-100">
-                              Pós-consulta com NPS integrado
-                            </p>
-                            <p>
-                              Coleta feedback real dos pacientes, identifica pontos de melhoria e aumenta a fidelização e a
-                              recorrência automaticamente.
-                            </p>
-                          </div>
-                        </div>
-
-                  {/* IMAGEM — CRESCIDA, MAIS À DIREITA, MAIOR NO DESKTOP */}
-                  <div className="relative flex justify-center md:justify-end">
-                    <div className="w-full max-w-[520px] md:max-w-[640px] lg:max-w-[760px] translate-x-0 md:translate-x-6 lg:translate-x-10">
-                      
-                      <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-neutral-400 text-center md:text-left">
-                        Exemplo de fluxo
-                      </p>
-
-                      <div className="overflow-hidden rounded-2xl border border-white/10 bg-neutral-900 shadow-xl shadow-black/40">
-                        <Image
-                          src="/template-n8n.png"
-                          alt="Fluxo de automações da Nexbase"
-                          width={2000}
-                          height={1200}
-                          quality={100}
-                          priority={false}
-                          className="w-full h-auto object-contain"
-                        />
-                      </div>
-
-                    </div>
-                  </div>
-
-                </div>
-
-              </div>
-            </section>
-
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* CTA + FORMULÁRIO */}
       <section id="lead-form" className="w-full bg-nex-bg">

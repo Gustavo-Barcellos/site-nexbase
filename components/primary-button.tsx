@@ -17,7 +17,7 @@ export function PrimaryButton({ label, className }: PrimaryButtonProps) {
       whileTap={{ scale: 0.98 }}
       className={cn(
         "relative flex w-full items-center justify-center gap-2 overflow-hidden rounded-md bg-emerald-500 px-4 py-2 text-sm font-semibold text-neutral-950 shadow-lg shadow-emerald-500/30 transition focus:outline-none",
-        className
+        className,
       )}
     >
       <span className="relative z-10 flex items-center gap-2">

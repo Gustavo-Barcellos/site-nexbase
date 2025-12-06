@@ -46,11 +46,11 @@ html {
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
   /* Nexbase Brand Colors */
-  --color-nex-bg: #0B1120;      /* fundo azul escuro */
-  --color-nex-lime: #5FF38C;    /* verde limão suave */
-  --color-nex-cyan: #3BE4FF;    /* ciano */
-  --color-nex-teal: #22C9C9;    /* turquesa */
-  --color-nex-gray: #A0A7B5;    /* cinza neutro */
+  --color-nex-bg: #0b1120; /* fundo azul escuro */
+  --color-nex-lime: #5ff38c; /* verde limão suave */
+  --color-nex-cyan: #3be4ff; /* ciano */
+  --color-nex-teal: #22c9c9; /* turquesa */
+  --color-nex-gray: #a0a7b5; /* cinza neutro */
 }
 
 :root {
@@ -163,6 +163,7 @@ html {
   animation: nex-flow-dash 1.1s linear infinite;
 }
 
-html, body {
+html,
+body {
   overflow-x: hidden;
 }

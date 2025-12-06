@@ -9,7 +9,12 @@ type AnimatedBgProps = {
 
 export function AnimatedBg({ className }: AnimatedBgProps) {
   return (
-    <div className={cn("pointer-events-none absolute inset-0 -z-10 overflow-hidden", className)}>
+    <div
+      className={cn(
+        "pointer-events-none absolute inset-0 -z-10 overflow-hidden",
+        className,
+      )}
+    >
       <motion.div
         initial={{ opacity: 0.4, scale: 1 }}
         animate={{ opacity: 0.9, scale: 1.1 }}

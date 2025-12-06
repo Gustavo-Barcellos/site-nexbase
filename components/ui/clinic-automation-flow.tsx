@@ -2,12 +2,7 @@
 
 import React from "react";
 import { motion } from "motion/react";
-import {
-  MessageCircle,
-  CalendarClock,
-  Bell,
-  SmilePlus,
-} from "lucide-react";
+import { MessageCircle, CalendarClock, Bell, SmilePlus } from "lucide-react";
 import { cn } from "@/lib/utils";
 import {
   Tooltip,
@@ -62,7 +57,7 @@ const ClinicAutomationFlow = ({ className }: ClinicAutomationFlowProps) => {
     <div
       className={cn(
         "relative flex w-full max-w-[900px] flex-col items-center",
-        className
+        className,
       )}
     >
       {/* Bloco que contém fluxo + círculo */}
@@ -117,7 +112,7 @@ const ClinicAutomationFlow = ({ className }: ClinicAutomationFlowProps) => {
                     type="button"
                     onClick={() =>
                       setOpenMobileId((prev) =>
-                        prev === step.id ? null : step.id
+                        prev === step.id ? null : step.id,
                       )
                     }
                     className="relative flex w-full flex-col items-center gap-1 rounded-xl border border-white/15 bg-neutral-900 px-4 py-3 text-center transition-colors hover:border-nex-lime/80"
